@@ -1,0 +1,31 @@
+<div class="col-md-8 offset-md-3">
+    <h2>Update User </h2>
+    <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" id="firstName" [(ngModel)]="user.firstName" name="firstName">
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" id="lastName" [(ngModel)]="user.lastName" name="lastName">
+    </div>
+    <div class="form-group">
+        <label>Adress</label>
+        <input type="text" class="form-control" id="addrs" [(ngModel)]="user.addrs" name="addrs">
+    </div>
+    <div class="form-group">
+        <label>Date of Joining</label>
+        <input type="date" class="form-control" id="doj" [(ngModel)]="newDoj" name="doj">
+       </div> 
+        <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date" class="form-control" id="dob" [(ngModel)]="newDob" name="dob">
+    </div>
+    <div class="form-group">
+        <label>Pin Code</label>
+        <input type="number" class="form-control" id="pinCode" [(ngModel)]="user.pinCode" name="pinCode">
+    </div>
+    <button  class="btn btn-info" type="submit">Update </button> 
+    <!--<button [routerLink]="['/users']" class="btn btn-info">Update </button>  -->
+    </form>
+    </div>

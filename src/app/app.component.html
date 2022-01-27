@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="users" routerLinkActive="active" class="nav-link">Users List</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="create-user" routerLinkActive="active" class="nav-link">Add User </a>
+        </li>
+    </ul>
+</nav>
+
+<h1 class="text-center" style="background-color: aqua;padding-top: 10px;padding-bottom: 10px;">{{title}}</h1>
+<div class="container">
+<!--<app-user-list></app-user-list><!-->
+    <router-outlet></router-outlet>
+</div>
+<footer class="footer">
+ <div class="container">
+     <span> All Rights Reserved 2020 @kpKartik</span>
+ </div>
+</footer>

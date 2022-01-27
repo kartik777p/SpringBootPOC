@@ -1,0 +1,34 @@
+<h2>User List</h2>
+<table class="table table-stripet">
+    <thead>
+        <tr>
+            <th>id </th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>date of Birth</th>
+            <th>date of Joining</th>
+            <th>pin code</th> 
+            <th>Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.uid}}</td>
+           <td>{{user.firstName}}</td>
+           <td>{{user.lastName}}</td>
+           <td>{{user.addrs}}</td>
+           <td>{{user.dob | date}}</td>
+           <td>{{user.doj | date}}</td>
+           <td>{{user.pinCode}}</td>
+           <td>
+               <button [routerLink]="['/update-user',user.uid]" class="btn btn-info">Update </button> 
+             <!-- <button (click)="updateUser(user.id)" class="btn btn-info">Update </button> -->
+            <!-- <button [routerLink]="['/delete-user',user.uid]" class="btn btn-danger" style="margin-left: 10px;">Delete  </button> --> 
+            <button (click)="deleteUser(user.uid)" class="btn btn-danger" style="margin-left: 5px ;"> Delete  </button>
+            <button (click)="userDetails(user.uid)" class="btn btn-secondary" style="margin-left: 5px ;"> View  </button> 
+        </td>
+
+        </tr>
+    </tbody>
+</table>
